@@ -116,17 +116,17 @@ export const BubbleButton = (props: Props) => {
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
           </svg>*/}
           <span
-          class={props.isBotOpened ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}
-          style={{
-            color: '#fff',
-            'z-index': 42424242,
-            right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
-            bottom: props.bottom ? `${props.bottom.toString()}px` : `${defaultBottom}px`,
-            padding: '8px',
-          }}
-        >
-          Une question ?
-        </span>
+            class={props.isBotOpened ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}
+            style={{
+              color: '#fff',
+              'z-index': 42424242,
+              right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
+              bottom: props.bottom ? `${props.bottom.toString()}px` : `${defaultBottom}px`,
+              padding: '8px',
+            }}
+          >
+            Une question ?
+          </span>
         </Show>
         <Show when={props.customIconSrc}>
           <img

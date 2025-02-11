@@ -47,7 +47,9 @@ export const Badge = (props: Props) => {
             color: props.footer?.textColor ?? props.poweredByTextColor ?? defaultTextColor,
             'background-color': props.badgeBackgroundColor ?? '#ffffff',
           }}
-        > </span>
+        >
+          {' '}
+        </span>
       </Show>
       <Show when={props.footer?.showFooter === false}>
         <span

@@ -167,7 +167,8 @@ export type LeadsConfig = {
   successMessage?: string;
 };
 
-const defaultWelcomeMessage = 'Bonjour. Je suis une intelligence artificielle fondée sur les données du site internet Dinamis et sur plusieurs documents ressources complémentaires. Posez-moi une question sur le dispositif et je ferai en sorte de vous répondre !';
+const defaultWelcomeMessage =
+  'Bonjour. Je suis une intelligence artificielle fondée sur les données du site internet Dinamis et sur plusieurs documents ressources complémentaires. Posez-moi une question sur le dispositif et je ferai en sorte de vous répondre !';
 
 /*const sourceDocuments = [
     {
