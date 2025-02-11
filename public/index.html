@@ -18,7 +18,7 @@
 <body>
     <div id="root"></div>
     <script type="module">
-        import Chatbot from './web.js'
+        import Chatbot from 'http://localhost:5678/web.js'
         
         // Example initialization:
         // If your .env contains:
@@ -28,8 +28,8 @@
         //
         // Then use the environment variable name as chatflowid:
         Chatbot.init({
-            chatflowid: 'agent1',    // or 'support', 'salesbot', etc.
-            apiHost: window.location.origin
+            chatflowid: "cfa3a31e-4188-446f-9f67-b4a38e0f9df8",
+            apiHost: "https://flowise-diyy.onrender.com",
         })
     </script>
 </body>

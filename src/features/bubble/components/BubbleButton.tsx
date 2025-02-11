@@ -12,10 +12,10 @@ type Props = ButtonTheme & {
   autoOpenOnMobile?: boolean; // Optional parameter for opening on mobile
 };
 
-const defaultButtonColor = '#3B81F6';
-const defaultIconColor = 'white';
-const defaultBottom = 20;
-const defaultRight = 20;
+const defaultButtonColor = '#0C9082';
+// const defaultIconColor = 'white';
+const defaultBottom = '20';
+const defaultRight = '20';
 
 export const BubbleButton = (props: Props) => {
   const buttonSize = getBubbleButtonSize(props.size);
@@ -89,19 +89,20 @@ export const BubbleButton = (props: Props) => {
         part="button"
         onClick={handleButtonClick}
         onMouseDown={onMouseDown}
-        class={`fixed shadow-md rounded-full hover:scale-110 active:scale-95 transition-transform duration-200 flex justify-center items-center animate-fade-in`}
+        class={`fixed shadow-md rounded-xl hover:scale-110 active:scale-95 transition-transform duration-200 flex justify-center items-center animate-fade-in`}
         style={{
           'background-color': props.backgroundColor ?? defaultButtonColor,
           'z-index': 42424242,
           right: `${position().right}px`,
           bottom: `${position().bottom}px`,
-          width: `${buttonSize}px`,
+          width: '10rem',
           height: `${buttonSize}px`,
           cursor: props.dragAndDrop ? 'grab' : 'pointer',
+          padding: '8px',
         }}
       >
         <Show when={isNotDefined(props.customIconSrc)} keyed>
-          <svg
+          {/*<svg
             viewBox="0 0 24 24"
             style={{
               stroke: props.iconColor ?? defaultIconColor,
@@ -113,7 +114,19 @@ export const BubbleButton = (props: Props) => {
             height={buttonSize * 0.6}
           >
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-          </svg>
+          </svg>*/}
+          <span
+          class={props.isBotOpened ? 'scale-0 opacity-0' : 'scale-100 opacity-100'}
+          style={{
+            color: '#fff',
+            'z-index': 42424242,
+            right: props.right ? `${props.right.toString()}px` : `${defaultRight}px`,
+            bottom: props.bottom ? `${props.bottom.toString()}px` : `${defaultBottom}px`,
+            padding: '8px',
+          }}
+        >
+          Une question ?
+        </span>
         </Show>
         <Show when={props.customIconSrc}>
           <img

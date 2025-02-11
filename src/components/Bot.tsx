@@ -167,7 +167,7 @@ export type LeadsConfig = {
   successMessage?: string;
 };
 
-const defaultWelcomeMessage = 'Hi there! How can I help?';
+const defaultWelcomeMessage = 'Bonjour. Je suis une intelligence artificielle fondée sur les données du site internet Dinamis et sur plusieurs documents ressources complémentaires. Posez-moi une question sur le dispositif et je ferai en sorte de vous répondre !';
 
 /*const sourceDocuments = [
     {
@@ -248,7 +248,7 @@ const defaultWelcomeMessage = 'Hi there! How can I help?';
 
 const defaultBackgroundColor = '#ffffff';
 const defaultTextColor = '#303235';
-const defaultTitleBackgroundColor = '#3B81F6';
+// const defaultTitleBackgroundColor = '#0C8E80';
 
 export const Bot = (botProps: BotProps & { class?: string }) => {
   // set a default value for showTitle if not set and merge with other props
